@@ -1,0 +1,126 @@
+.navigation {
+  margin: 28px 70px 28px;
+}
+.navigation__nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.navigation__burger-button {
+  position: relative;
+  display: none;
+  width: 44px;
+  height: 44px;
+  margin: 15px 30px 15px 0;
+  border: none;
+  background-color: #0f4157;
+  padding: 0;
+  z-index: 3;
+  background-color: #202020;
+}
+.navigation__span {
+  position: absolute;
+  left: 5px;
+  background-color: #fff;
+  width: 35px;
+  height: 3px;
+  display: block;
+}
+.navigation__span:nth-child(1) {
+  transform: translateY(-10px);
+}
+
+.navigation__span:nth-child(3) {
+  transform: translateY(10px);
+}
+/*крестик*/
+.navigation_opened .navigation__span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+.navigation_opened .navigation__span:nth-child(2) {
+  opacity: 0;
+}
+.navigation_opened .navigation__span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+}
+.navigation__title {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0;
+  text-decoration: none;
+}
+.navigation__title.active {
+  font-weight: 500;
+}
+.navigation__title_none {
+  display: none;
+}
+.navigation__subtitle {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  margin: 7px 0 7px;
+  text-decoration: none;
+}
+.navigation__logo {
+  background-color: #0f4157;
+  border-radius: 20%;
+  background-image: url("../../images/icon__COLOR_icon-main.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+.navigation__account {
+  display: flex;
+  gap: 13px;
+  width: 100px;
+  height: 32px;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    margin: 0px 0px 28px;
+  }
+  .navigation__nav {
+    background-color: #202020;
+    position: absolute;
+    right: -520px;
+    top: 0;
+    width: 520px;
+    flex-direction: column;
+    height: 1024px;
+    gap: 24px;
+    visibility: hidden;
+    transition: transform 0.5s, visibility 0.5s;
+  }
+  .navigation_opened .navigation__nav {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+  .navigation__burger-button {
+    display: block;
+  }
+  .navigation__title {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 2px;
+  }
+  .navigation__title.active {
+    border-bottom: 2px solid #fff;
+  }
+  .navigation__title_none {
+    display: block;
+    margin: 161px 0 10px;
+  }
+  .navigation__account {
+    margin: 598px 0 92px;
+  }
+}
