@@ -1,9 +1,7 @@
 import "./MoviesCardList.css";
 import MoviesCard from "../MoviesCard/MoviesCard";
 
-
-function MoviesCardList({showButton}) {
-
+function MoviesCardList({ showButton }) {
   return (
     <section className="moviesCardList">
       <ul className="moviesCardList__list">
@@ -13,9 +11,11 @@ function MoviesCardList({showButton}) {
         <MoviesCard />
         <MoviesCard />
       </ul>
-      {showButton && <button className="moviesCardList__button" type="button">
-        Еще
-      </button>}
+      {showButton && (
+        <button className="moviesCardList__button" type="button">
+          Еще
+        </button>
+      )}
     </section>
   );
 }

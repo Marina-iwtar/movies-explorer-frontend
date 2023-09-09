@@ -10,7 +10,8 @@ function Portfolio() {
         <a
           className="portfolio__link portfolio__link_border"
           href="https://github.com/Marina-iwtar/how-to-learn"
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
         >
           <h2 className="portfolio__subtitle">Статичный сайт</h2>
           <img className="portfolio__image" src={arrow} alt="стрелка"></img>
@@ -18,7 +19,8 @@ function Portfolio() {
         <a
           className="portfolio__link portfolio__link_border"
           href="https://marina-iwtar.github.io/mesto/"
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
         >
           <h2 className="portfolio__subtitle">Адаптивный сайт</h2>
           <img className="portfolio__image" src={arrow} alt="стрелка"></img>
@@ -26,7 +28,8 @@ function Portfolio() {
         <a
           className="portfolio__link"
           href="https://marina-iwtar.github.io/russian-travel/index.html"
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
         >
           <h2 className="portfolio__subtitle">Одностраничное приложение</h2>
           <img className="portfolio__image" src={arrow} alt="стрелка"></img>

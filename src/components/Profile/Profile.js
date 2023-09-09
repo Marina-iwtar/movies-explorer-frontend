@@ -5,8 +5,8 @@ import React, { useState } from "react";
 
 function Profile({ loggedIn }) {
   const [isEditProfile, setEditProfile] = useState(true);
-  function handleRedacte(){
-    setEditProfile(item => !item);
+  function handleRedacte() {
+    setEditProfile((item) => !item);
   }
   return (
     <>
@@ -41,18 +41,28 @@ function Profile({ loggedIn }) {
               <span className="profile__input-error"></span>
             </label>
           </form>
-          {isEditProfile ? 
-          <div className="profile__container">
-          <button className="profile__button" type="button" onClick={handleRedacte}>
-            Редактировать
-          </button>
-          <Link to="/" className="profile__link">
-            Выйти из аккаунта
-          </Link>
-          </div> :
-          <button className="profile__button-save" type="submit" onClick={handleRedacte}>
-            Сохранить
-          </button>}
+          {isEditProfile ? (
+            <div className="profile__container">
+              <button
+                className="profile__button"
+                type="button"
+                onClick={handleRedacte}
+              >
+                Редактировать
+              </button>
+              <Link to="/" className="profile__link">
+                Выйти из аккаунта
+              </Link>
+            </div>
+          ) : (
+            <button
+              className="profile__button-save"
+              type="submit"
+              onClick={handleRedacte}
+            >
+              Сохранить
+            </button>
+          )}
         </section>
       </main>
     </>

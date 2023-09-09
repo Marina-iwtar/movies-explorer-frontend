@@ -19,11 +19,11 @@ function App() {
           <Route path="/movies" element={<Movies loggedIn={loggedIn} />} />
           <Route
             path="/saved-movies"
-            element={<SavedMovies loggedIn={loggedIn}/>}
+            element={<SavedMovies loggedIn={loggedIn} />}
           />
           <Route path="/profile" element={<Profile loggedIn={loggedIn} />} />
           <Route path="/signin" element={<Login />} />
-          <Route path="/signup" element={<Register/>} />
+          <Route path="/signup" element={<Register />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

@@ -6,11 +6,11 @@ import { useLocation } from "react-router-dom";
 function MoviesCard() {
   const [isButtonSave, setButtonSave] = useState(false);
   const location = useLocation();
-  const saveMovies = location.pathname==='/saved-movies';
+  const saveMovies = location.pathname === "/saved-movies";
   const button = `moviesCard__button ${
     isButtonSave ? "moviesCard__button_save" : "moviesCard__button_img "
-  }${saveMovies ? "moviesCard__button-delete":""}`;
-  
+  }${saveMovies ? "moviesCard__button-delete" : ""}`;
+
   function cardClick(card) {
     setButtonSave((card) => !card);
   }

@@ -44,7 +44,7 @@
   display: flex;
   align-items: center;
 }
-.promo__container-link:hover{
+.promo__container-link:hover {
   opacity: 0.7;
 }
 .promo__link {
@@ -60,7 +60,6 @@
 @media (max-width: 1200px) {
   .promo {
     gap: 40px;
-   
   }
 }
 @media (max-width: 1110px) {
@@ -125,14 +124,14 @@
     line-height: 38px;
     letter-spacing: -1.2px;
   }
-  .promo__subtitle{
+  .promo__subtitle {
     margin: 0 0 80px;
   }
   .promo__image {
     width: 210.001px;
     height: 206px;
   }
-  .promo__container-link{
+  .promo__container-link {
     margin-bottom: 30px;
   }
 }

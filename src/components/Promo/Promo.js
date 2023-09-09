@@ -13,9 +13,9 @@ function Promo() {
           Листайте ниже, чтобы узнать больше про этот проект и его создателя.
         </p>
         <div className="promo__container-link">
-        <a href="#tech" className="promo__link">
-          Узнать больше
-        </a>
+          <a href="#tech" className="promo__link">
+            Узнать больше
+          </a>
         </div>
       </div>
       <img className="promo__image" src={image} alt=""></img>

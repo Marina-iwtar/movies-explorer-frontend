@@ -8,20 +8,22 @@
   flex-direction: column;
   margin-bottom: 19px;
   gap: 5px;
- }
- .login__field_margin{
+}
+.login__field_margin {
   margin-bottom: 100px;
- }
+}
 .login__input {
   border: 0;
   background-color: #202020;
   border-bottom: 1px solid #424242;
   color: #fff;
-   font-size: 14px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  padding-bottom:10px ;
+  padding-bottom: 10px;
+  outline: none;
+  border-radius: 3px;
 }
 .login__input::placeholder {
   color: #fff;
@@ -29,10 +31,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-
 }
-.login__input:focus{
- background-color: #8b8b8b;
+.login__input:focus {
+  background-color: #3ddc84;
 }
 .login__input-error {
   color: #ee3465;
@@ -42,6 +43,5 @@
   font-weight: 400;
   line-height: normal;
 }
-@media (max-width:430px) {
-
+@media (max-width: 430px) {
 }

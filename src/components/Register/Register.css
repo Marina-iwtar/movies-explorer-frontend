@@ -19,6 +19,8 @@
   font-weight: 500;
   line-height: normal;
   padding-bottom: 10px;
+  outline: none;
+  border-radius: 3px;
 }
 .register__input::placeholder {
   color: #fff;
@@ -28,7 +30,7 @@
   line-height: normal;
 }
 .register__input:focus {
-  background-color: #8b8b8b;
+  background-color: #3ddc84;
 }
 .register__input_error-red {
   color: #ee3465;

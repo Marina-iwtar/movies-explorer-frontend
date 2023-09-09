@@ -40,7 +40,7 @@
   border: 0;
   margin-top: 114px;
 }
-.form__button:hover{
+.form__button:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -52,7 +52,7 @@
   font-weight: 400;
   line-height: normal;
   margin: 15px 0 70px;
- }
+}
 .form__link {
   color: #4285f4;
   text-align: center;
@@ -64,29 +64,29 @@
   margin: 0;
   padding-left: 6px;
 }
-.form__link:hover{
+.form__link:hover {
   opacity: 0.8;
 }
-@media (max-width:430px) {
-  .form{
+@media (max-width: 430px) {
+  .form {
     padding: 56px 0 0;
     max-width: 260px;
     align-items: center;
   }
-   .form__title{
+  .form__title {
     text-align: center;
     margin: 48px 0 79px;
   }
-  .form__button{
+  .form__button {
     width: 260px;
   }
-  .form__subtitle{
+  .form__subtitle {
     font-size: 12px;
   }
-  .form__link{
+  .form__link {
     font-size: 12px;
   }
-  .form__button{
+  .form__button {
     margin-top: 202px;
   }
 }

@@ -1,11 +1,22 @@
 .navigation {
   margin: 28px 70px 28px;
 }
+.navigation__overlay {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
 .navigation__nav {
   display: flex;
   gap: 20px;
   align-items: center;
 }
+
 .navigation__burger-button {
   position: relative;
   display: none;
@@ -13,10 +24,9 @@
   height: 44px;
   margin: 15px 30px 15px 0;
   border: none;
-  background-color: #0f4157;
   padding: 0;
-  z-index: 3;
-  background-color: #202020;
+  z-index: 5;
+  background-color: transparent;
 }
 .navigation__span {
   position: absolute;
@@ -55,6 +65,9 @@
 .navigation__title.active {
   font-weight: 500;
 }
+.navigation__title:hover {
+  opacity: 0.7;
+}
 .navigation__title_none {
   display: none;
 }
@@ -76,6 +89,9 @@
   width: 30px;
   height: 30px;
 }
+.navigation__logo_grey {
+  background-color: #313131;
+}
 .navigation__account {
   display: flex;
   gap: 13px;
@@ -84,10 +100,16 @@
   text-decoration: none;
   margin-left: 30px;
 }
+.navigation__account:hover {
+  opacity: 0.7;
+}
 
 @media (max-width: 768px) {
   .navigation {
     margin: 0px 0px 28px;
+  }
+  .navigation__overlay {
+    display: block;
   }
   .navigation__nav {
     background-color: #202020;
@@ -100,6 +122,7 @@
     gap: 24px;
     visibility: hidden;
     transition: transform 0.5s, visibility 0.5s;
+    z-index: 3;
   }
   .navigation_opened .navigation__nav {
     transform: translateX(-100%);
@@ -122,5 +145,11 @@
   }
   .navigation__account {
     margin: 598px 0 92px;
+  }
+}
+@media (max-width: 320px) {
+  .navigation__nav {
+    width: 320px;
+    right: -320px;
   }
 }

@@ -61,7 +61,7 @@
   .techs {
     padding: 90px 50px 90px;
   }
-  .techs__title{
+  .techs__title {
     margin: 80px 0 22px;
   }
   .techs__subtitle {
@@ -80,11 +80,10 @@
 @media (max-width: 670px) {
   .techs__components {
     flex-wrap: wrap;
-    
   }
- }
+}
 @media (max-width: 400px) {
-  .techs{
+  .techs {
     padding: 70px 18px 70px;
   }
   .techs__title {
@@ -98,7 +97,7 @@
     letter-spacing: -0.44px;
     margin: 0 0 50px;
   }
- .techs__components{
-  max-width: 178px;
- }
+  .techs__components {
+    max-width: 178px;
+  }
 }

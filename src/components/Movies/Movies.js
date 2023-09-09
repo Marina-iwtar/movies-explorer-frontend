@@ -9,7 +9,7 @@ function Movies({ loggedIn }) {
       <Header loggedIn={loggedIn} />
       <main className="movies">
         <SearchForm />
-        <MoviesCardList showButton={true}/>
+        <MoviesCardList showButton={true} />
       </main>
       <Footer />
     </>

@@ -10,7 +10,7 @@ function Form(props) {
         <img className="form__logo" alt="логотип" src={logo}></img>
       </Link>
       <form className="form__content" noValidate>
-      <h1 className="form__title">{props.title}</h1>
+        <h1 className="form__title">{props.title}</h1>
         {props.children}
         <button type="submit" className="form__button">
           {props.buttonName}

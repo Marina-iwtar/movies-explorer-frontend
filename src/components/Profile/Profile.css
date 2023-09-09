@@ -60,6 +60,10 @@
   background-color: #202020;
   border: none;
 }
+.profile__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
 .profile__button-save {
   border-radius: 3px;
   background: #3456f3;
@@ -73,6 +77,10 @@
   line-height: normal;
   margin: 223px 0 50px;
 }
+.profile__button-save:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
 .profile__link {
   text-decoration: none;
   color: #ee3465;
@@ -80,6 +88,10 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+.profile__link:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 .profile__container {
   margin: 220px 0 70px;
@@ -96,7 +108,7 @@
     margin: 210px 0 269px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 420px) {
   .profile {
     max-width: 320px;
     padding: 0 30px;
