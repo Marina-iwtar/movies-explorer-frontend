@@ -4,20 +4,21 @@ import { NavLink, useLocation } from "react-router-dom";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isActive, iActive] = useState(false);
   const location = useLocation();
   function toggleBurgerMenu() {
     setIsOpen(!isOpen);
+    iActive(!isActive);
   }
   return (
     <section className={`navigation ${isOpen ? "navigation_opened" : ""}`}>
-      <button className="navigation__burger-button" onClick={toggleBurgerMenu}>
-        <span className="navigation__span"></span>
-        <span className="navigation__span"></span>
-        <span className="navigation__span"></span>
+      <button className={`navigation__burger-button ${isActive ? "is-active" : ""}`} onClick={toggleBurgerMenu}>
+        <span className={`navigation__span ${isActive ? "line-active" : ""}`}></span>
+        <span className={`navigation__span ${isActive ? "line-active" : ""}`}></span>
+        <span className={`navigation__span ${isActive ? "line-active" : ""}`}></span>
       </button>
-      {isOpen && (
-        <div className="navigation__overlay">
-          <nav className="navigation__nav ">
+       <div className={`${isOpen ? "navigation__overlay":""}`}></div>
+         <nav className="navigation__nav ">
             <NavLink
               to="/"
               className="navigation__title navigation__title_none"
@@ -41,9 +42,7 @@ function Navigation() {
               ></div>
             </NavLink>
           </nav>
-        </div>
-      )}
-    </section>
+         </section>
   );
 }
 export default Navigation;

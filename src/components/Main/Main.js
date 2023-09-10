@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AboutMe from "../AboutMe/AboutMe";
 import Promo from "../Promo/Promo";
 import AboutProject from "../AboutProject/AboutProject";
@@ -7,7 +7,8 @@ import Portfolio from "../Portfolio/Portfolio";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-function Main({ loggedIn }) {
+function Main() {
+  const [loggedIn, setLoggedIn] = useState(true);
   return (
     <>
       <Header loggedIn={loggedIn} />

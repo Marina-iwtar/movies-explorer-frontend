@@ -19,6 +19,7 @@ function Login() {
             required
             minLength={6}
             maxLength={30}
+            type="email"
           />
           <span className="login__input-error"></span>
         </label>
@@ -30,6 +31,8 @@ function Login() {
             required
             minLength={2}
             maxLength={30}
+            name="logPasword"
+            type="password"
           />
           <span className="login__input-error"></span>
         </label>

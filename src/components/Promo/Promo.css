@@ -1,6 +1,5 @@
 .promo {
   background-color: #073042;
-
   display: flex;
   gap: 190px;
   padding: 75px 70px;
@@ -106,9 +105,6 @@
   }
   .promo__image {
     margin: 0;
-  }
-  .promo__container-link {
-    margin-bottom: 76px;
   }
   .promo__link {
     margin: 0 20px;

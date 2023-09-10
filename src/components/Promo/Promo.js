@@ -18,7 +18,7 @@ function Promo() {
           </a>
         </div>
       </div>
-      <img className="promo__image" src={image} alt=""></img>
+      <img className="promo__image" src={image} alt="изображение мира"></img>
     </section>
   );
 }

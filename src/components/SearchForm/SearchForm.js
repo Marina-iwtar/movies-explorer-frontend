@@ -12,6 +12,7 @@ function SearchForm() {
           required
           name="film"
           minLength={2}
+          maxLength={30}
         ></input>
         <button className="searchForm__button" type="submit">
           Поиск

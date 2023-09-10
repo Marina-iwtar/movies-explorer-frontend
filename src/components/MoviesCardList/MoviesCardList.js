@@ -5,12 +5,12 @@ function MoviesCardList({ showButton }) {
   return (
     <section className="moviesCardList">
       <ul className="moviesCardList__list">
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-      </ul>
+        <li className="moviesCardList__item"><MoviesCard /></li>
+        <li className="moviesCardList__item"><MoviesCard /></li>
+        <li className="moviesCardList__item"><MoviesCard /></li>
+        <li className="moviesCardList__item"><MoviesCard /></li>
+        <li className="moviesCardList__item"><MoviesCard /></li>
+        </ul>
       {showButton && (
         <button className="moviesCardList__button" type="button">
           Еще

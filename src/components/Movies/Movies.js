@@ -2,8 +2,10 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
+import React, { useState } from "react";
 
-function Movies({ loggedIn }) {
+function Movies() {
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <>
       <Header loggedIn={loggedIn} />

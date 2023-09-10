@@ -24,6 +24,7 @@ function Profile({ loggedIn }) {
                 required
                 placeholder="Марина"
                 disabled={isEditProfile}
+                type="text"
               />
               <span className="profile__input-error"></span>
             </label>
@@ -37,6 +38,7 @@ function Profile({ loggedIn }) {
                 required
                 placeholder="pochta@yandex.ru"
                 disabled={isEditProfile}
+                type="email"
               />
               <span className="profile__input-error"></span>
             </label>

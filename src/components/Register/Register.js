@@ -25,6 +25,7 @@ function Register() {
             required
             minLength={2}
             maxLength={30}
+            type="text"
           />
           <span className="register__input-error"></span>
         </label>
@@ -36,6 +37,8 @@ function Register() {
             required
             minLength={6}
             maxLength={30}
+            type="email"
+            name="email"
           />
           <span className="register__input-error"></span>
         </label>
@@ -47,6 +50,8 @@ function Register() {
             required
             minLength={2}
             maxLength={30}
+            type="password" 
+            name="password"
           />
           <span className="register__input-error">Что-то пошло не так</span>
         </label>
