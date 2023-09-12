@@ -2,6 +2,10 @@
   display: inline-block;
   margin-top: 26px;
 }
+.filterCheckbox__checkbox:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
 .filterCheckbox__input {
   position: absolute;
   opacity: 0;

@@ -1,5 +1,5 @@
 .navigation {
-  margin: 28px 70px 28px;
+  margin: 22px 70px 28px 0;
 }
 .navigation__overlay {
   display: none;
@@ -13,12 +13,17 @@
 }
 .navigation__nav {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
   align-items: center;
+ }
+.navigation__links{
+   display: flex;
+   gap:20px;
 }
-
 .navigation__burger-button {
   position: relative;
+  top: 0;
+  right: 0;
   display: none;
   width: 44px;
   height: 44px;
@@ -108,7 +113,7 @@
   width: 100px;
   height: 32px;
   text-decoration: none;
-  margin-left: 30px;
+  margin-left: 50px;
 }
 .navigation__account:hover {
   opacity: 0.7;
@@ -123,12 +128,12 @@
   }
   .navigation__nav {
     background-color: #202020;
-    position: absolute;
+    position: fixed;
     right: -520px;
     top: 0;
     width: 520px;
     flex-direction: column;
-    height: 1024px;
+    height: 100vh;
     gap: 24px;
     visibility: hidden;
     transition: transform 0.5s, visibility 0.5s;
@@ -138,10 +143,19 @@
     transform: translateX(-100%);
     visibility: visible;
   }
+  .navigation__links{
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
   .navigation__burger-button {
     display: block;
   }
-  
+  .navigation__burger-button.is-active{
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
   .navigation__title {
     font-size: 18px;
     font-weight: 500;
@@ -155,21 +169,20 @@
     margin: 161px 0 10px;
   }
   .navigation__account {
-    margin: 598px 0 92px;
+   margin: 0 0 92px;
   }
 }
 @media (max-width: 400px) {
   .navigation__nav {
     width: 320px;
     right: -320px;
-    height: 780px;
+    /*height: 780px;*/
   }
     .navigation__burger-button{
     margin: 15px 0 16px;
     width: 40px;
     height: 43px;
-    left: 2px;
-  }
+    }
   .navigation__span{
     width: 23px;
   }
@@ -180,7 +193,7 @@
 padding: 5px;
 }
 .navigation__account {
-  margin: 415px 0 48px;
+  margin: 0 0 48px;
 }
 .navigation__burger-button.is-active{
   margin: 7px 9px 15px 0;

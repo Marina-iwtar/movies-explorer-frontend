@@ -15,7 +15,7 @@ function Login() {
           E-mail
           <input
             className="login__input"
-            placeholder="pochta@yandex.ru|"
+            placeholder="E-mail"
             required
             minLength={6}
             maxLength={30}

@@ -5,8 +5,8 @@ function AboutProject() {
   return (
     <section className="aboutProject">
       <Titles title="О проекте " />
-      <section className="aboutProject__containers">
-        <div className="aboutProject__container">
+      <div className="aboutProject__containers">
+        <article className="aboutProject__container">
           <h3 className="aboutProject__subtitle">
             Дипломный проект включал 5 этапов
           </h3>
@@ -14,8 +14,8 @@ function AboutProject() {
             Составление плана, работу над бэкендом, вёрстку, добавление
             функциональности и финальные доработки.
           </p>
-        </div>
-        <div className="aboutProject__container">
+        </article>
+        <article className="aboutProject__container">
           <h3 className="aboutProject__subtitle">
             На выполнение диплома ушло 5 недель
           </h3>
@@ -23,8 +23,8 @@ function AboutProject() {
             У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было
             соблюдать, чтобы успешно защититься.
           </p>
-        </div>
-      </section>
+        </article>
+      </div>
       <div className="aboutProject__duration">
         <h4 className="aboutProject__header aboutProject__header_green">
           1 неделя

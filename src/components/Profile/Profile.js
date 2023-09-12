@@ -14,7 +14,7 @@ function Profile({ loggedIn }) {
       <main>
         <section className="profile">
           <h1 className="profile__title">Привет, Марина!</h1>
-          <form className="profile__form" noValidate name="profile">
+          <form className="profile__form"  name="profile">
             <label className="profile__subtitle">
               Имя
               <input

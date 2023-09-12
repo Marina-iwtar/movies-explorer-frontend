@@ -1,7 +1,7 @@
 import "./FilterCheckbox.css";
 function FilterCheckbox() {
   return (
-    <section className="filterCheckbox">
+    <div className="filterCheckbox">
       <label className="filterCheckbox__checkbox">
         <input
           className="filterCheckbox__input"
@@ -10,7 +10,7 @@ function FilterCheckbox() {
         ></input>
         <span className="filterCheckbox__text">Короткометражки</span>
       </label>
-    </section>
+    </div>
   );
 }
 export default FilterCheckbox;

@@ -15,7 +15,7 @@ function MoviesCard() {
     setButtonSave((card) => !card);
   }
   return (
-    <section className="moviesCard">
+    <article className="moviesCard">
       <div className="moviesCard__container">
         <h2 className="moviesCard__title">В погоне за Бенкси</h2>
         <p className="moviesCard__time">0ч 42м</p>
@@ -24,7 +24,7 @@ function MoviesCard() {
       <button type="button" className={button} onClick={cardClick}>
         {isButtonSave ? "Сохранить" : ""}
       </button>
-    </section>
+    </article>
   );
 }
 export default MoviesCard;

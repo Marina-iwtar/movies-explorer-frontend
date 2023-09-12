@@ -23,7 +23,7 @@ function Header({ loggedIn }) {
           </Link>
           <nav className="header__nav">
             <Link to="/signup" className="header__title">Регистрация</Link>
-           <Link to="/signin"> <button className="header__button" >Войти</button></Link> 
+           <Link to="/signin" className="header__button"> Войти</Link> 
           </nav>
         </header>
       )}

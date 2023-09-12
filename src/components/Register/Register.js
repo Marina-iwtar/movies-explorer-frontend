@@ -21,7 +21,7 @@ function Register() {
           <input
             className="register__input"
             name="name"
-            placeholder="Марина"
+            placeholder="Имя"
             required
             minLength={2}
             maxLength={30}
@@ -33,7 +33,7 @@ function Register() {
           E-mail
           <input
             className="register__input"
-            placeholder="pochta@yandex.ru|"
+            placeholder="E-mail"
             required
             minLength={6}
             maxLength={30}
@@ -46,7 +46,7 @@ function Register() {
           Пароль
           <input
             className={redInput}
-            placeholder="........."
+            placeholder="пароль"
             required
             minLength={2}
             maxLength={30}
@@ -56,7 +56,7 @@ function Register() {
           <span className="register__input-error">Что-то пошло не так</span>
         </label>
       </Form>
-    </main>
+     </main>
   );
 }
 export default Register;

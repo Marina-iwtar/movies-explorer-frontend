@@ -80,7 +80,12 @@
 @media (max-width: 670px) {
   .techs__components {
     flex-wrap: wrap;
-  }
+   }
+}
+@media (max-width:560px) {
+  .techs__components {
+    width: 370px;
+   }
 }
 @media (max-width: 400px) {
   .techs {
