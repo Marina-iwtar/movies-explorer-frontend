@@ -4,11 +4,11 @@ import { NavLink, useLocation } from "react-router-dom";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isActive, iActive] = useState(false);
+  const [isActive, setIsactive] = useState(false);
   const location = useLocation();
   function toggleBurgerMenu() {
     setIsOpen(!isOpen);
-    iActive(!isActive);
+    setIsactive(!isActive);
   }
   return (
     <div className={`navigation ${isOpen ? "navigation_opened" : ""}`}>
