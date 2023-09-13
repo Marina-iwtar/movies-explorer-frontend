@@ -1,0 +1,62 @@
+import "./Register.css";
+import React, { useState } from "react";
+import Form from "../Form/Form";
+
+function Register() {
+  const [isState, setState] = useState(false);
+  const redInput = `register__input ${
+    isState ? "register__input_error-red" : ""
+  }`;
+  return (
+    <main className="register">
+      <Form
+        title="Добро пожаловать!"
+        buttonName="Зарегистрироваться"
+        subtitle="Уже зарегистрированы?"
+        linkName="Войти"
+        link="/signin"
+      >
+        <label className="register__field">
+          Имя
+          <input
+            className="register__input"
+            name="name"
+            placeholder="Имя"
+            required
+            minLength={2}
+            maxLength={30}
+            type="text"
+          />
+          <span className="register__input-error"></span>
+        </label>
+        <label className="register__field">
+          E-mail
+          <input
+            className="register__input"
+            placeholder="E-mail"
+            required
+            minLength={6}
+            maxLength={30}
+            type="email"
+            name="email"
+          />
+          <span className="register__input-error"></span>
+        </label>
+        <label className="register__field">
+          Пароль
+          <input
+            className={redInput}
+            placeholder="пароль"
+            required
+            minLength={2}
+            maxLength={30}
+            type="password" 
+            name="password"
+          />
+          <span className="register__input-error">Что-то пошло не так</span>
+        </label>
+      </Form>
+     </main>
+  );
+}
+export default Register;

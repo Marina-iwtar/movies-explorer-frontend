@@ -1,0 +1,16 @@
+.page {
+  background-color: #202020;
+  color: white;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.page__content {
+  max-width: 1280px;
+  background-color: #202020;
+  margin: 0 auto;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #fff;
+  box-sizing: border-box;
+}

@@ -1,0 +1,23 @@
+.title {
+  margin: 0;
+  padding: 0 0 23px;
+  color: #fff;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  max-width: 1140px;
+}
+@media (max-width: 670px) {
+  .title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+}
+@media (max-width: 320px) {
+  .title {
+    padding: 0 0 28px;
+  }
+}
