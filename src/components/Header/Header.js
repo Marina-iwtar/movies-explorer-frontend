@@ -9,7 +9,7 @@ function Header({ loggedIn }) {
   const headerBack = `header ${location.pathname ==="/" ? "header" :"header_back"}`;
   return (
     <>
-      {!loggedIn ? (
+      {loggedIn ?  (
         <header className={headerBack}>
           <Link to="/">
             <img className="header__logo" alt="логотип" src={logo}></img>
@@ -26,7 +26,7 @@ function Header({ loggedIn }) {
            <Link to="/signin" className="header__button"> Войти</Link> 
           </nav>
         </header>
-      )}
+      ) }
     </>
   );
 }

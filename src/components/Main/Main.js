@@ -7,8 +7,8 @@ import Portfolio from "../Portfolio/Portfolio";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-function Main() {
-  const [loggedIn, setLoggedIn] = useState(true);
+function Main({loggedIn}) {
+ 
   return (
     <>
       <Header loggedIn={loggedIn} />

@@ -35,6 +35,12 @@
 .moviesCardList__button_none {
   display: none;
 }
+.moviesCardList__text{
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
 @media (max-width:1279px) {
   .moviesCardList__list{
     width: 750px;

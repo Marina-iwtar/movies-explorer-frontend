@@ -28,7 +28,7 @@
   line-height: 20px;
 }
 .searchForm__input:focus {
-  background-color: #ee3465;
+  background-color: #3ddc84;
   color: #fff;
 }
 .searchForm__button {

@@ -35,6 +35,9 @@
 .login__input:focus {
   background-color: #3ddc84;
 }
+.login__input:invalid{
+  color: #ee3465;
+}
 .login__input-error {
   color: #ee3465;
   font-family: Inter;

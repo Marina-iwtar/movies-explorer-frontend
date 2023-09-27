@@ -1,29 +1,34 @@
 import "./MoviesCard.css";
-import image from "../../images/imagecard.png";
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-function MoviesCard() {
+function MoviesCard({card}) {
   const [isButtonSave, setButtonSave] = useState(false);
   const location = useLocation();
   const saveMovies = location.pathname === "/saved-movies";
   const button = `moviesCard__button ${
     isButtonSave ? "moviesCard__button_save" : "moviesCard__button_img "
   }${saveMovies ? "moviesCard__button-delete" : ""}`;
+  const durationMovieHours = Math.trunc(card.duration / 60);
+  const durationMovieMinuts = card.duration % 60;
 
-  function cardClick(card) {
-    setButtonSave((card) => !card);
+  function cardClick() {
+    setButtonSave((item) => !item);
   }
   return (
     <article className="moviesCard">
+      
       <div className="moviesCard__container">
-        <h2 className="moviesCard__title">В погоне за Бенкси</h2>
-        <p className="moviesCard__time">0ч 42м</p>
+        <h2 className="moviesCard__title">{card.nameRU}</h2>
+        <p className="moviesCard__time">{`${durationMovieHours}ч ${durationMovieMinuts}м`}</p>
       </div>
-      <img className="moviesCard__image" alt="постер" src={image}></img>
+      <Link target="_blank" to={card.trailerLink}>
+      <img className="moviesCard__image" alt={card.nameRu} src={`https://api.nomoreparties.co/${card.image.url}`}/>
+      </Link>
       <button type="button" className={button} onClick={cardClick}>
         {isButtonSave ? "Сохранить" : ""}
       </button>
+     
     </article>
   );
 }
