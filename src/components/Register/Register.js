@@ -1,34 +1,16 @@
 import "./Register.css";
-import React,{useState} from "react";
+import React from "react";
 import Form from "../Form/Form";
 import { EMAIL_VALID, NAME_VALID } from "../../utils/constants";
 import useForm from "../hooks/useForm";
 
-function Register({onSubmit}) {
-  //const [isState, setState] = useState(false);
-  const { errors,
-    isValue,
-    handleChange,
-    isFormValid}= useForm();
-  //const red = `register__input ${isState ? "register__input_error-red":""}`;
-  /*const [registerValue, setRegisterValue] = useState({
-    email: "",
-    password: "",
-    name: "",
-  });
+function Register({ onSubmit, error }) {
+  const { errors, isValue, handleChange, isFormValid } = useForm();
 
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setRegisterValue({
-      ...registerValue,
-      [name]: value,
-    });
-  }*/
-  
- function handleSubmit(e){
-  e.preventDefault();
-   onSubmit(isValue);
- }
+  function handleSubmit(e) {
+    e.preventDefault();
+    onSubmit(isValue);
+  }
 
   return (
     <main className="register">
@@ -40,12 +22,13 @@ function Register({onSubmit}) {
         link="/signin"
         onSubmit={handleSubmit}
         isDisabled={!isFormValid}
+        error={error}
       >
         <label className="register__field">
           Имя
           <input
             onChange={handleChange}
-            value={isValue.name || ''}
+            value={isValue.name || ""}
             className="register__input"
             name="name"
             placeholder="Имя"

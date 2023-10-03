@@ -21,8 +21,12 @@ function Form(props) {
         <button
           type="submit"
           disabled={props.isDisabled ? true : false}
-          className={props.isDisabled ? "form__button form__button_inactive" : "form__button"}
-                 >
+          className={
+            props.isDisabled
+              ? "form__button form__button_inactive"
+              : "form__button"
+          }
+        >
           {props.buttonName}
         </button>
       </form>

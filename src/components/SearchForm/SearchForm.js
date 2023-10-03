@@ -2,20 +2,19 @@ import "./SearchForm.css";
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 import React, { useState } from "react";
 
+function SearchForm({ onSearch, onChange, onMoviesShort }) {
+  const [searchInput, setSearchInput] = useState("");
+  const [isErrorQuery, setIsErrorQuery] = useState(false);
 
-function SearchForm({onMovies, onChange,onMoviesShort}) {
-const [searchInput, setSearchInput] = useState ("");
-const [isErrorQuery, setIsErrorQuery]= useState(false);
-
-function hundleSubmit(e){
-  e.preventDefault(); 
-  if(searchInput.trim().length === 0){
-    setIsErrorQuery(true);
-  }else{
-    setIsErrorQuery(false);
-  onMovies(searchInput);
+  function hundleSubmit(e) {
+    e.preventDefault();
+    if (searchInput.trim().length === 0) {
+      setIsErrorQuery(true);
+    } else {
+      setIsErrorQuery(false);
+      onSearch(searchInput);
+    }
   }
-}
   return (
     <section className="searchForm">
       <form className="searchForm__form" noValidate onSubmit={hundleSubmit}>
@@ -27,15 +26,17 @@ function hundleSubmit(e){
           name="film"
           minLength={2}
           maxLength={30}
-          onChange={e=>setSearchInput(e.target.value)}
-          value ={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
+          value={searchInput}
         ></input>
         <button className="searchForm__button" type="submit">
           Поиск
         </button>
       </form>
-      {isErrorQuery && <span className="searchForm__error">Нужно ввести ключевое слово</span>}
-      <FilterCheckbox onChange={onChange} onMoviesShort={onMoviesShort}/>
+      {isErrorQuery && (
+        <span className="searchForm__error">Нужно ввести ключевое слово</span>
+      )}
+      <FilterCheckbox onChange={onChange} onMoviesShort={onMoviesShort} />
       <div className="searchForm__border"></div>
     </section>
   );

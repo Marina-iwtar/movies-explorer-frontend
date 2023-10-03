@@ -5,6 +5,7 @@ dark-4;
 
 Ссылки на проект
 IP 84.252.136.5
+Ссылка на Pull requests: https://github.com/Marina-iwtar/movies-explorer-frontend/pull/2
 
 Frontend https://iwtarmovies.nomoredomainsicu.ru
 

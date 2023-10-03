@@ -86,6 +86,9 @@
     width: 300px;
     height: 271px;
   }
+  .moviesCard__image {
+    height: 168px;
+  }
   .moviesCard__container {
     margin: 14px 14px;
   }

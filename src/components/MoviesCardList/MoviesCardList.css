@@ -35,41 +35,42 @@
 .moviesCardList__button_none {
   display: none;
 }
-.moviesCardList__text{
+.moviesCardList__text {
   color: #fff;
   text-align: center;
   font-size: 12px;
   font-weight: 500;
 }
-@media (max-width:1279px) {
-  .moviesCardList__list{
+@media (max-width: 1279px) {
+  .moviesCardList__list {
     width: 750px;
   }
 }
 @media (max-width: 890px) {
   .moviesCardList {
-    padding: 80px 30px 80px;
+    padding: 0;
   }
 
   .moviesCardList__list {
     row-gap: 35px;
     column-gap: 24px;
+    margin-left: 30px;
   }
 }
+
 @media (max-width: 767px) {
   .moviesCardList__list {
     width: 342px;
+    margin: 0;
   }
 }
 @media (max-width: 400px) {
   .moviesCardList {
     padding: 50px 10px 80px;
   }
+
   .moviesCardList__list {
     row-gap: 16px;
     width: 300px;
-  }
-  .moviesCardList__button {
-    margin-top: 80px;
   }
 }

@@ -43,10 +43,10 @@
   font-weight: 500;
   line-height: 16px;
   border: none;
- text-decoration: none;
- display: flex;
- align-items: center;
- padding:0 20px 0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0 20px 0;
 }
 .header__button:hover {
   opacity: 0.8;

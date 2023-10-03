@@ -1,25 +1,35 @@
 import "./MoviesCardList.css";
 import MoviesCard from "../MoviesCard/MoviesCard";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-function MoviesCardList({ showButton,movies, errorsLoading }) {
-  //const [cards, setCards] = useState([]);
-  
+function MoviesCardList({
+  movies,
+  errorsLoading,
+  handleSaveFilm,
+  saveMovies,
+  isSaveMovie,
+  onDelete,
+  onMoviesShown,
+}) {
   return (
     <section className="moviesCardList">
-    { movies.length > 0 ? 
-     ( <ul className="moviesCardList__list">
-       {movies.map((card)=>(
-        <MoviesCard card ={card} key={card.id}/> 
-       ))}
-        </ul>):(
-      <p className="moviesCardList__text">{errorsLoading ||'По вашему запросу ничего не найдено'}</p>
-        )
-        }
-      {showButton && (
-        <button className="moviesCardList__button" type="button">
-          Еще
-        </button>
+      {movies.length > 0 ? (
+        <ul className="moviesCardList__list">
+          {movies.slice(0, onMoviesShown).map((card) => (
+            <MoviesCard
+              card={card}
+              key={card.id ? card.id : card.movieId}
+              handleSaveFilm={handleSaveFilm}
+              saveMovies={saveMovies}
+              isSaveMovie={isSaveMovie}
+              onDelete={onDelete}
+            />
+          ))}
+        </ul>
+      ) : (
+        <p className="moviesCardList__text">
+          {errorsLoading || "По вашему запросу ничего не найдено"}
+        </p>
       )}
     </section>
   );

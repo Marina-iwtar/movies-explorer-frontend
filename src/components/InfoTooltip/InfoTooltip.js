@@ -11,7 +11,7 @@ function InfoTooltip({ title, isOpen, onClose }) {
             aria-label="кнопка закрытия модального окна"
             onClick={onClose}
           ></button>
-        <p className="popup__subtitle">{title}</p>
+          <p className="popup__subtitle">{title}</p>
         </div>
       </div>
     </div>

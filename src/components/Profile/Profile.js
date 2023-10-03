@@ -1,7 +1,7 @@
 import "./Profile.css";
 import Header from "../Header/Header";
 import { Link } from "react-router-dom";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import useForm from "../hooks/useForm";
 import { EMAIL_VALID, NAME_VALID } from "../../utils/constants";
@@ -9,14 +9,12 @@ import { EMAIL_VALID, NAME_VALID } from "../../utils/constants";
 function Profile({ loggedIn, onClick, onSubmit, error }) {
   const [isEditProfile, setEditProfile] = useState(true);
   const currentUser = useContext(CurrentUserContext);
-  const { errors, isValue, handleChange, isFormValid, resetForm } = useForm({name:currentUser.name, email:currentUser.email});
-  const validation = currentUser.name === isValue.name && currentUser.email === isValue.email
- //console.log(currentUser);
-  /*useEffect(() => {
-    if (currentUser) {
-      resetForm(currentUser);
-    }
-  }, [currentUser, resetForm]);*/
+  const { errors, isValue, handleChange, isFormValid, resetForm } = useForm({
+    name: currentUser.name,
+    email: currentUser.email,
+  });
+  const validation =
+    currentUser.name === isValue.name && currentUser.email === isValue.email;
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -29,19 +27,6 @@ function Profile({ loggedIn, onClick, onSubmit, error }) {
   function handleRedacte() {
     setEditProfile((e) => !e);
   }
-
-  /*useEffect(() => {
-    setIsValue(currentUser);
-    setEditProfile(false);
-  }, [currentUser, setIsValue]);*/
-  /*useEffect(() => {
-    if (currentUser.name === isValue.name && currentUser.email === isValue.email) {
-      setIsValueLast(true);
-    } else {
-      setIsValueLast(false);
-    }
-     // eslint-disable-next-line react-hooks/exhaustive-deps
-     }, [isValue]);*/
 
   return (
     <>
@@ -78,7 +63,7 @@ function Profile({ loggedIn, onClick, onSubmit, error }) {
               E-mail
               <input
                 onChange={handleChange}
-                value={isValue.email  ?? currentUser.email}
+                value={isValue.email ?? currentUser.email}
                 className="profile__input"
                 minLength={2}
                 maxLength={30}
@@ -115,7 +100,6 @@ function Profile({ loggedIn, onClick, onSubmit, error }) {
                   }
                   type="submit"
                   disabled={!isFormValid || validation ? true : false}
-                  //onSubmit={handleSubmit}
                 >
                   Сохранить
                 </button>

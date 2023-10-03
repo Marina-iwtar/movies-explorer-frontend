@@ -2,29 +2,14 @@ import "./Login.css";
 import React from "react";
 import Form from "../Form/Form";
 import { EMAIL_VALID } from "../../utils/constants";
-import useForm  from "../hooks/useForm";
+import useForm from "../hooks/useForm";
 
-function Login({onSubmit,error}) {
-
-const { errors,
-    isValue,
-    handleChange,
-    isFormValid}= useForm();
-  /*const [loginValue, setLoginValue] = useState({
-    email: "",
-    password: "",
-  });
-  function handleChange(e) {
-    setLoginValue({
-      ...loginValue,
-      [e.target.name]: e.target.value,
-    });
-  }*/
-
-  function handleSubmit(e){
+function Login({ onSubmit, error }) {
+  const { errors, isValue, handleChange, isFormValid } = useForm();
+  function handleSubmit(e) {
     e.preventDefault();
-     onSubmit(isValue);
-   }
+    onSubmit(isValue);
+  }
 
   return (
     <main className="login">
@@ -42,8 +27,8 @@ const { errors,
         <label className="login__field">
           E-mail
           <input
-           onChange={handleChange}
-           value={isValue.email ||""}
+            onChange={handleChange}
+            value={isValue.email || ""}
             className="login__input"
             placeholder="E-mail"
             required
@@ -58,8 +43,8 @@ const { errors,
         <label className="login__field login__field_margin">
           Пароль
           <input
-             onChange={handleChange}
-             value={isValue.password || ""}
+            onChange={handleChange}
+            value={isValue.password || ""}
             className="login__input"
             placeholder="пароль"
             required

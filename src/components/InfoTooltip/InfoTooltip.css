@@ -29,7 +29,6 @@
   align-items: center;
   padding: 34px 36px 37px;
   position: relative;
- 
 }
 .popup__close {
   width: 32px;
@@ -44,7 +43,7 @@
   background-position: center;
   padding: 0;
 }
-.popup__close:hover{
+.popup__close:hover {
   opacity: 0.6;
 }
 .popup__subtitle {

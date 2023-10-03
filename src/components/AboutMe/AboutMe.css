@@ -43,7 +43,7 @@
   text-decoration: none;
   margin: 0;
 }
-.aboutMe__link:hover{
+.aboutMe__link:hover {
   opacity: 0.7;
 }
 .aboutMe__foto {
@@ -93,7 +93,6 @@
 @media (max-width: 650px) {
   .aboutMe {
     padding-top: 70px;
-    max-width: 292px;
   }
   .aboutMe__allAboutMe {
     flex-direction: column-reverse;
@@ -131,7 +130,6 @@
   .aboutMe__text {
     font-size: 11px;
     line-height: 16px;
-    margin: 0 0  40px;
+    margin: 0 0 40px;
   }
-
 }
