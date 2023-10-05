@@ -1,4 +1,5 @@
 export const BASE_URL = "https://api.iwtarmovies.nomoredomainsicu.ru";
+
 function checkResponse(res) {
   if (res.ok) {
     return res.json();

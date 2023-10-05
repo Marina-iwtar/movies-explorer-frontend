@@ -1,6 +1,7 @@
 .filterCheckbox__checkbox {
   display: inline-block;
   margin-top: 26px;
+  max-width: 170px;
 }
 .filterCheckbox__checkbox:hover {
   cursor: pointer;

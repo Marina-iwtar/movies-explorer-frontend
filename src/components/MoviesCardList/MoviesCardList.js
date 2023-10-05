@@ -10,6 +10,7 @@ function MoviesCardList({
   isSaveMovie,
   onDelete,
   onMoviesShown,
+  setFilterMovies
 }) {
   return (
     <section className="moviesCardList">
@@ -23,6 +24,7 @@ function MoviesCardList({
               saveMovies={saveMovies}
               isSaveMovie={isSaveMovie}
               onDelete={onDelete}
+              setFilterMovies={setFilterMovies}
             />
           ))}
         </ul>

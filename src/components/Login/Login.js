@@ -4,7 +4,7 @@ import Form from "../Form/Form";
 import { EMAIL_VALID } from "../../utils/constants";
 import useForm from "../hooks/useForm";
 
-function Login({ onSubmit, error }) {
+function Login({ onSubmit, error, isSubmitting }) {
   const { errors, isValue, handleChange, isFormValid } = useForm();
   function handleSubmit(e) {
     e.preventDefault();
@@ -23,6 +23,7 @@ function Login({ onSubmit, error }) {
         error={error}
         noValidate
         isDisabled={!isFormValid}
+        isSubmitting={isSubmitting}
       >
         <label className="login__field">
           E-mail

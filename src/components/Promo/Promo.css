@@ -34,26 +34,24 @@
   width: 310px;
   height: 304px;
 }
-.promo__container-link {
+.promo__link {
+  max-width: 130px;
+}
+.promo__buttom {
   background-color: #073042;
-  max-width: 129px;
-  height: 36px;
   border: 1px solid #fff;
   border-radius: 3px;
-  display: flex;
-  align-items: center;
-}
-.promo__container-link:hover {
-  opacity: 0.7;
-}
-.promo__link {
   color: #fff;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 16px;
-  text-decoration: none;
-  margin: 0 0 0 20px;
+  width: 129px;
+  height: 36px;
+}
+.promo__buttom:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {

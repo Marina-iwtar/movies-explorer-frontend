@@ -6,22 +6,23 @@ import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import useForm from "../hooks/useForm";
 import { EMAIL_VALID, NAME_VALID } from "../../utils/constants";
 
-function Profile({ loggedIn, onClick, onSubmit, error }) {
+function Profile({ loggedIn, onClick, onSubmit, error, isSubmitting }) {
   const [isEditProfile, setEditProfile] = useState(true);
   const currentUser = useContext(CurrentUserContext);
-  const { errors, isValue, handleChange, isFormValid, resetForm } = useForm({
-    name: currentUser.name,
-    email: currentUser.email,
-  });
+  const { errors, isValue, handleChange, isFormValid, setIsFormValid } =
+    useForm({
+      name: currentUser.name,
+      email: currentUser.email,
+    });
   const validation =
     currentUser.name === isValue.name && currentUser.email === isValue.email;
 
   function handleSubmit(e) {
     e.preventDefault();
     onSubmit(isValue);
-    resetForm();
-    if (!error) {
-      handleRedacte();
+
+    if (!isEditProfile) {
+      setIsFormValid(false);
     }
   }
   function handleRedacte() {
@@ -94,12 +95,14 @@ function Profile({ loggedIn, onClick, onSubmit, error }) {
                 <span className="profile__error-span">{error}</span>
                 <button
                   className={
-                    !isFormValid || validation
+                    !isFormValid || validation || isSubmitting
                       ? "profile__button-save profile__button-save_inactive"
                       : "profile__button-save"
                   }
                   type="submit"
-                  disabled={!isFormValid || validation ? true : false}
+                  disabled={
+                    !isFormValid || validation || isSubmitting ? true : false
+                  }
                 >
                   Сохранить
                 </button>

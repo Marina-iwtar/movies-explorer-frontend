@@ -1,6 +1,7 @@
 import "./SearchForm.css";
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { getSearchMovies } from "../../utils/utils";
 
 function SearchForm({ onSearch, onChange, onMoviesShort }) {
   const [searchInput, setSearchInput] = useState("");
@@ -14,7 +15,13 @@ function SearchForm({ onSearch, onChange, onMoviesShort }) {
       setIsErrorQuery(false);
       onSearch(searchInput);
     }
-  }
+    }
+    useEffect(() => {
+      const query = localStorage.getItem('query');
+      if (query ) {
+        setSearchInput(query);
+      }
+    }, []);
   return (
     <section className="searchForm">
       <form className="searchForm__form" noValidate onSubmit={hundleSubmit}>

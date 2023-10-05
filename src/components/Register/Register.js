@@ -4,7 +4,7 @@ import Form from "../Form/Form";
 import { EMAIL_VALID, NAME_VALID } from "../../utils/constants";
 import useForm from "../hooks/useForm";
 
-function Register({ onSubmit, error }) {
+function Register({ onSubmit, error,isSubmitting }) {
   const { errors, isValue, handleChange, isFormValid } = useForm();
 
   function handleSubmit(e) {
@@ -23,6 +23,7 @@ function Register({ onSubmit, error }) {
         onSubmit={handleSubmit}
         isDisabled={!isFormValid}
         error={error}
+        isSubmitting={isSubmitting}
       >
         <label className="register__field">
           Имя
@@ -64,7 +65,7 @@ function Register({ onSubmit, error }) {
             className="register__input"
             placeholder="пароль"
             required
-            minLength={2}
+            minLength={9}
             maxLength={30}
             type="password"
             name="password"
@@ -72,6 +73,7 @@ function Register({ onSubmit, error }) {
           <span className="register__input-error">{errors.password || ""}</span>
         </label>
       </Form>
+   
     </main>
   );
 }

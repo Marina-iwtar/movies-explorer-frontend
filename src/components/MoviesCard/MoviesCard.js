@@ -6,11 +6,13 @@ function MoviesCard({ card, handleSaveFilm, isSaveMovie, onDelete }) {
   const [isButtonSave, setButtonSave] = useState(false);
   const location = useLocation();
   const isSavedMovies = location.pathname === "/saved-movies";
+  const id = !isSavedMovies ? card.id : card.movieId;
+  const isSavedMovie = isSaveMovie(id);
   const img = isSavedMovies
     ? card.image
     : `https://api.nomoreparties.co/${card.image.url}`;
   const button = `moviesCard__button ${
-    isSaveMovie(card.id) && !isSavedMovies
+    isSavedMovie && !isSavedMovies
       ? "moviesCard__button_img"
       : !isSavedMovies
       ? "moviesCard__button_save"
@@ -18,16 +20,10 @@ function MoviesCard({ card, handleSaveFilm, isSaveMovie, onDelete }) {
   }`;
   const durationMovieHours = Math.trunc(card.duration / 60);
   const durationMovieMinuts = card.duration % 60;
-
+ 
   function cardClick() {
-    if (isSavedMovies) {
-      if (isSaveMovie) {
-        const id = !isSavedMovies ? card.id : card.movieId;
-        onDelete(id);
-      } else {
-        handleSaveFilm(card);
-        setButtonSave(!isButtonSave);
-      }
+    if (isSavedMovie) {
+      onDelete(id);
     } else {
       handleSaveFilm(card);
       setButtonSave(!isButtonSave);

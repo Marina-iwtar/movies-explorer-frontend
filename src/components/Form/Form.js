@@ -14,13 +14,14 @@ function Form(props) {
         onSubmit={props.onSubmit}
         id="form"
         noValidate
+        isSubmitting={props.isSubmitting}
       >
         <h1 className="form__title">{props.title}</h1>
         {props.children}
         <span className="form__error-span">{props.error}</span>
         <button
           type="submit"
-          disabled={props.isDisabled ? true : false}
+          disabled={props.isDisabled || props.isSubmitting ? true : false}
           className={
             props.isDisabled
               ? "form__button form__button_inactive"
