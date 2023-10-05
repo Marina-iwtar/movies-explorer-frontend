@@ -2,11 +2,12 @@ import "./SearchForm.css";
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 import React, { useState, useEffect } from "react";
 import { getSearchMovies } from "../../utils/utils";
+import { useLocation } from "react-router-dom";
 
 function SearchForm({ onSearch, onChange, onMoviesShort }) {
   const [searchInput, setSearchInput] = useState("");
   const [isErrorQuery, setIsErrorQuery] = useState(false);
-
+  const location = useLocation();
   function hundleSubmit(e) {
     e.preventDefault();
     if (searchInput.trim().length === 0) {
@@ -17,11 +18,12 @@ function SearchForm({ onSearch, onChange, onMoviesShort }) {
     }
     }
     useEffect(() => {
+      if(location.pathname==='/movies'){
       const query = localStorage.getItem('query');
       if (query ) {
         setSearchInput(query);
       }
-    }, []);
+    }}, []);
   return (
     <section className="searchForm">
       <form className="searchForm__form" noValidate onSubmit={hundleSubmit}>

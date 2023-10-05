@@ -38,7 +38,8 @@ function useForm(defaultva) {
     resetForm,
     handleChange,
     isFormValid,
-    setIsFormValid
+    setIsFormValid,
+    setIsValue
   };
 }
 export default useForm;

@@ -1,7 +1,7 @@
 import "./Profile.css";
 import Header from "../Header/Header";
 import { Link } from "react-router-dom";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import useForm from "../hooks/useForm";
 import { EMAIL_VALID, NAME_VALID } from "../../utils/constants";
@@ -9,11 +9,17 @@ import { EMAIL_VALID, NAME_VALID } from "../../utils/constants";
 function Profile({ loggedIn, onClick, onSubmit, error, isSubmitting }) {
   const [isEditProfile, setEditProfile] = useState(true);
   const currentUser = useContext(CurrentUserContext);
-  const { errors, isValue, handleChange, isFormValid, setIsFormValid } =
-    useForm({
-      name: currentUser.name,
-      email: currentUser.email,
-    });
+  const {
+    errors,
+    isValue,
+    handleChange,
+    isFormValid,
+    setIsFormValid,
+    setIsValue,
+  } = useForm({
+    name: currentUser.name,
+    email: currentUser.email,
+  });
   const validation =
     currentUser.name === isValue.name && currentUser.email === isValue.email;
 
@@ -28,7 +34,10 @@ function Profile({ loggedIn, onClick, onSubmit, error, isSubmitting }) {
   function handleRedacte() {
     setEditProfile((e) => !e);
   }
-
+  console.log(isValue);
+  useEffect(() => {
+    setIsValue({ name: currentUser.name, email: currentUser.email });
+  }, [currentUser,setIsValue]);
   return (
     <>
       <Header loggedIn={!loggedIn} />
@@ -46,7 +55,7 @@ function Profile({ loggedIn, onClick, onSubmit, error, isSubmitting }) {
               Имя
               <input
                 onChange={handleChange}
-                value={isValue.name ?? currentUser.name}
+                value={isValue.name || ""}
                 className="profile__input"
                 minLength={2}
                 maxLength={30}
@@ -64,7 +73,7 @@ function Profile({ loggedIn, onClick, onSubmit, error, isSubmitting }) {
               E-mail
               <input
                 onChange={handleChange}
-                value={isValue.email ?? currentUser.email}
+                value={isValue.email || ""}
                 className="profile__input"
                 minLength={2}
                 maxLength={30}
