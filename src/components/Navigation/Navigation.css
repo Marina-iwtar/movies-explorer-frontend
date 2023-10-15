@@ -15,10 +15,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
- }
-.navigation__links{
-   display: flex;
-   gap:20px;
+}
+.navigation__links {
+  display: flex;
+  gap: 20px;
 }
 .navigation__burger-button {
   position: relative;
@@ -33,10 +33,10 @@
   z-index: 5;
   background-color: transparent;
 }
-.navigation__burger-button.is-active{
+.navigation__burger-button.is-active {
   margin: 14px 11px 15px 0;
-}  
-.navigation__burger-button:hover{
+}
+.navigation__burger-button:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -48,7 +48,7 @@
   height: 3px;
   display: block;
 }
-.navigation__span.line-active{
+.navigation__span.line-active {
   width: 22px;
 }
 .navigation__span:nth-child(1) {
@@ -138,12 +138,12 @@
     visibility: hidden;
     transition: transform 0.5s, visibility 0.5s;
     z-index: 3;
-      }
+  }
   .navigation_opened .navigation__nav {
     transform: translateX(-100%);
     visibility: visible;
   }
-  .navigation__links{
+  .navigation__links {
     flex-direction: column;
     align-items: center;
     gap: 24px;
@@ -151,7 +151,7 @@
   .navigation__burger-button {
     display: block;
   }
-  .navigation__burger-button.is-active{
+  .navigation__burger-button.is-active {
     position: fixed;
     right: 0;
     top: 0;
@@ -169,7 +169,7 @@
     margin: 161px 0 10px;
   }
   .navigation__account {
-   margin: 0 0 92px;
+    margin: 0 0 92px;
   }
 }
 @media (max-width: 400px) {
@@ -178,24 +178,24 @@
     right: -320px;
     /*height: 780px;*/
   }
-    .navigation__burger-button{
+  .navigation__burger-button {
     margin: 15px 0 16px;
     width: 40px;
     height: 43px;
-    }
-  .navigation__span{
+  }
+  .navigation__span {
     width: 23px;
   }
-.navigation__title_none{
-  margin: 146px 0 0;
-}
-.navigation__title.active {
-padding: 5px;
-}
-.navigation__account {
-  margin: 0 0 48px;
-}
-.navigation__burger-button.is-active{
-  margin: 7px 9px 15px 0;
-}  
+  .navigation__title_none {
+    margin: 146px 0 0;
+  }
+  .navigation__title.active {
+    padding: 5px;
+  }
+  .navigation__account {
+    margin: 0 0 48px;
+  }
+  .navigation__burger-button.is-active {
+    margin: 7px 9px 15px 0;
+  }
 }

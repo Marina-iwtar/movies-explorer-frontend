@@ -2,7 +2,6 @@
 import "./Portfolio.css";
 import arrow from "../../images/arrow.svg";
 
-
 function Portfolio() {
   return (
     <section className="portfolio">

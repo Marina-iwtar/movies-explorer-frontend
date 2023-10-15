@@ -94,7 +94,6 @@
   }
   .aboutProject__duration {
     grid-template-columns: 2fr 4fr;
-    /*gap: 8px;*/
   }
   .aboutProject__header {
     font-size: 11px;

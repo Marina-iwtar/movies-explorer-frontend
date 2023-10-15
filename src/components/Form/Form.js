@@ -9,10 +9,25 @@ function Form(props) {
       <Link to="/">
         <img className="form__logo" alt="логотип" src={logo}></img>
       </Link>
-      <form className="form__content">
+      <form
+        className="form__content"
+        onSubmit={props.onSubmit}
+        id="form"
+        noValidate
+        isSubmitting={props.isSubmitting}
+      >
         <h1 className="form__title">{props.title}</h1>
         {props.children}
-        <button type="submit" className="form__button">
+        <span className="form__error-span">{props.error}</span>
+        <button
+          type="submit"
+          disabled={props.isDisabled || props.isSubmitting ? true : false}
+          className={
+            props.isDisabled
+              ? "form__button form__button_inactive"
+              : "form__button"
+          }
+        >
           {props.buttonName}
         </button>
       </form>
@@ -26,4 +41,3 @@ function Form(props) {
   );
 }
 export default Form;
-

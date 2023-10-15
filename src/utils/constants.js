@@ -1,0 +1,28 @@
+const EMAIL_VALID = "[a-zA-Z0-9_.]+@[a-zA-Z0-9_]+\\.[a-z]{2,}";
+const NAME_VALID = "^[A-Za-zА-Яа-я\\s\\-]{2,30}$";
+//для отображения карточек на странице
+const DECKTOP = 3;
+const TABLET = 2;
+const MOBILE = 2;
+const SCRIN_SIZE_LARGE = 1180;
+const SCREEN_SIZE_MEDIUM = 1023;
+const SCREEN_SIZE_MOBILE = 800;
+const DISPLAYED_CARDS_16 = 16;
+const DISPLAYED_CARDS_12 = 12;
+const DISPLAYED_CARDS_8 = 8;
+const DISPLAYED_CARDS_5 = 5;
+
+export {
+  EMAIL_VALID,
+  NAME_VALID,
+  DECKTOP,
+  TABLET,
+  MOBILE,
+  SCREEN_SIZE_MOBILE,
+  SCREEN_SIZE_MEDIUM,
+  SCRIN_SIZE_LARGE,
+  DISPLAYED_CARDS_5,
+  DISPLAYED_CARDS_8,
+  DISPLAYED_CARDS_12,
+  DISPLAYED_CARDS_16,
+};

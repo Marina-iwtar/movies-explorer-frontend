@@ -1,16 +1,16 @@
 import "./FilterCheckbox.css";
-function FilterCheckbox() {
+function FilterCheckbox({ onChange, onMoviesShort }) {
   return (
-    <div className="filterCheckbox">
-      <label className="filterCheckbox__checkbox">
-        <input
-          className="filterCheckbox__input"
-          type="checkbox"
-          id="checkbox"
-        ></input>
-        <span className="filterCheckbox__text">Короткометражки</span>
-      </label>
-    </div>
+    <label htmlFor="checkbox" className="filterCheckbox__checkbox">
+      <input
+        className="filterCheckbox__input"
+        type="checkbox"
+        id="checkbox"
+        onChange={onChange}
+        checked={onMoviesShort}
+      ></input>
+      <span className="filterCheckbox__text">Короткометражки</span>
+    </label>
   );
 }
 export default FilterCheckbox;

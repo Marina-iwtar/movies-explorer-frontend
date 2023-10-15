@@ -1,6 +1,7 @@
 .filterCheckbox__checkbox {
   display: inline-block;
   margin-top: 26px;
+  max-width: 170px;
 }
 .filterCheckbox__checkbox:hover {
   cursor: pointer;
@@ -32,16 +33,17 @@
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #3ddc84;
+  background-color: #cfd3d1;
   border-radius: 18px;
   transition: 0.5s ease;
 }
+
 .filterCheckbox__text::after {
   display: block;
   content: "";
   position: absolute;
   top: 5px;
-  left: 20px;
+  left: 5px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -53,7 +55,7 @@
 }
 .filterCheckbox__input:checked + .filterCheckbox__text::after {
   background-color: #fff;
-  left: 5px;
+  left: 20px;
 }
 @media (max-width: 890px) {
   .filterCheckbox__checkbox {

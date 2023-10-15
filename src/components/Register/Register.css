@@ -32,7 +32,7 @@
 .register__input:focus {
   background-color: #3ddc84;
 }
-.register__input_error-red {
+.register__input:invalid {
   color: #ee3465;
 }
 .register__input-error {
