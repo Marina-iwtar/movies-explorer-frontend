@@ -1,12 +1,20 @@
-movies-explorer-frontend
-Ссылка на макет: https://www.figma.com/file/6FMWkB94wE7KTkcCgUXtnC/light-1?type=design&node-id=1-9662&mode=design&t=U1aVwjVEysUm4x8M-0
-dark-4;
-Адрес репозитория:
+#movies-explorer-frontend
 
-Ссылки на проект
-IP 84.252.136.5
-Ссылка на Pull requests: https://github.com/Marina-iwtar/movies-explorer-frontend/pull/2
+Frontend-репозиторий приложения для поиска фильмов.
 
-Frontend https://iwtarmovies.nomoredomainsicu.ru
+## Функциональность
+* Авторизация и регистрация пользователей.
+* Редактирование профиля пользователя.
+* Поиск фильмов по буквам без учета регистра и языка
+* Фильтрация фильмов по времени
+* Сохранение понравившихся фильмов на отдельную страницу, удаление и фильтрация этих фильмов.
 
-Backend https://api.iwtarmovies.nomoredomainsicu.ru
+## Стек технологийЖ
+* HTML
+* CSS
+* React
+* JavaScript (ES6)
+* Адаптивная верстка
+* nginx
+* Flexbox
+  
